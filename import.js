@@ -2,13 +2,13 @@
 
 const fs = require('fs');
 const dir = 'include', // all include HTML files
-    input = 'layout.html',
-    output = 'index.html'; // final output HTML file
+    input = 'layout.html', // main file
+    output = 'output.html'; // final output HTML file
 
 let importFile = (dir, input, output) => {
     fs.readFile(`${dir}/${input}`, {encoding: 'utf8'}, (err, data) => {
         if (err) throw err;
-        
+
         // replace <link rel="import" href="header.html"> to the content of href file
         let dataReplace = data.replace(/<link\srel="import"\shref="(.*)">/gi, (matches, path) => {
             return fs.readFileSync(`${dir}/${path}`, {encoding: 'utf8'});
