@@ -1,0 +1,7 @@
+{
+  "name": "files-import",
+  "version": "1.0.0",
+  "main": "import.js",
+  "author": "Mike Lin",
+  "license": "MIT"
+}
