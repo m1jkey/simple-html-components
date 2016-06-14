@@ -4,7 +4,7 @@
 $ node import.js
 ```
 
- use html like this to import
+use HTML like this to import other components
 ```html
 <link rel="import" href="filename.html">
 ```
